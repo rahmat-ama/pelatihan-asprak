@@ -1,9 +1,11 @@
+//Lengkapi Kode program yang rumpang ini serta perbaiki penulisan programnya
+
 #include <stdio.h>
 
 int main() {
     int jawaban;
     
-    printf("Selamat datang di quiz sederhana!\n");
+    printf("Selamat datang di quiz pilihan ganfda!\n");
     printf("Pertanyaan 1: Berapa hasil dari 5 + 3?\n");
     printf("1. 6\n2. 7\n3. 8\n");
     printf("Masukkan pilihan Anda (1-3): ");
