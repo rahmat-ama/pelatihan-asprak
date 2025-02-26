@@ -1,24 +1,20 @@
 def has_duplicate_dictionary(lst):
-    # dictionary ini berisi key:value, dimana key adalah
-    # item yang terdapat di list dan value adalah seberapa
-    # sering item tersebut muncul di list
     frequency = {}
-    frekuensi = 0
     for item in lst:
-        pass
-def has_duplicate_set(lst):
-    # set ini berisi item yang sudah pernah dilihat dalam lst
-    seen = set()
-    duplicate = []
-    for item in lst:
-        if item in seen :
-            duplicate.append(item)
-        seen.add(item)
+        frequency[item] = frequency.get(item, 0) + 1
+    return frequency
 
-    return sorted(duplicate)
+def has_duplicate_set(lst):
+    seen = set()
+    duplicates = set()
+    for item in lst:
+        if item in seen:
+            duplicates.add(item)
+        seen.add(item)
+    return duplicates
 
 def main():
-    lst = [1, 2, 3, 4, 5, 6, 7, 7, 8, 8, 1, 2, 3, 4]
+    lst = [1, 2, 3, 4, 5, 6, 7, 7, 2, 3, 3]
     print(has_duplicate_dictionary(lst))
     print(has_duplicate_set(lst))
 
